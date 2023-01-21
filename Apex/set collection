@@ -1,0 +1,75 @@
+// Create Set Collection class object...
+Set<string> namesSet = new Set<String>();
+
+// Collection size...
+system.debug('Collection size is....: '+ namesSet.size());
+
+// Adding the Elements to collection...
+namesSet.Add('Salesforce');
+namesSet.Add('Apex');
+namesSet.Add('Welcome');
+namesSet.Add('Hyderabad');
+
+system.debug('Collection size is...: '+ namesSet.Size());
+
+// Display the collection elements...
+system.debug('Collection Elements are...: '+ namesSet);
+
+// Display each element in a seperate row..
+for(string element : namesSet)
+{
+    system.debug('Collection Element is...: '+ element);
+}
+
+// Adding Duplicate Elements...
+
+system.debug('Before Adding Duplicate, Collection size...: '+ namesSet.size());
+
+namesSet.Add('India');
+namesSet.Add('Bangalore');
+namesSet.Add('Welcome');
+
+system.debug('After Adding Duplicate, Collection size...: '+ namesSet.size());
+
+// Check for Collection is Empty or not..
+
+if(namesSet.isEmpty())
+{
+    system.debug('Collection is Empty.');
+}
+else
+{
+    system.debug('Collection is Not Empty.');
+}
+
+// Adding Bulk elements...
+List<string> countryNames = new List<string>();
+	countryNames.Add('India');
+	countryNames.Add('Australia');
+	countryNames.Add('China');
+	countryNames.Add('MiddleEast');
+
+namesSet.AddAll(countryNames);
+
+system.debug('After Adding the elements, Collection size...: '+ namesSet.size());
+
+// Adding duplicate element with Different Case.
+	namesSet.Add('india');
+
+system.debug('After Adding the elements, New Collection size...: '+ namesSet.size());
+
+// Remove the element from the collection..
+if(namesSet.Contains('Welcome'))
+{
+	namesSet.Remove('Welcome');    
+    system.debug('Element Removed. New Collection size...: '+ namesSet.size());
+}
+else
+{
+    system.debug('Element Not Found.');
+}
+
+// Remove all elements from collection..
+namesSet.Clear();
+
+system.debug('After Removing all elements, collection size is...: '+ namesSet.size());
