@@ -1,0 +1,75 @@
+// Create Map Collection class object...
+Map<string, string> fruitsMap = new Map<string,string>();
+
+// Get the Collection size...
+system.debug('Collection size is....: '+ fruitsMap.size());
+
+// Adding the elements to collection..
+fruitsMap.Put('red','apple');
+fruitsMap.put('green','apple');
+fruitsmap.put('yellow','Banana');
+
+system.debug('After adding elements, Collection size is....: '+ fruitsMap.size());
+
+// Display All Key's exist in the collection..
+Set<string> keysCollection = fruitsMap.KeySet();
+
+system.debug('Keys Collection is...: '+ keysCollection);
+
+// Display All Values exist in the collection...
+	/*
+        List<string> valuesCollection = fruitsMap.Values();
+        
+        for(string valueName : valuesCollection)
+        {
+            system.debug('Value Name is...: '+ valueName);
+        }
+
+		valuesCollection.clear();
+	*/
+
+	for(string valueName : fruitsMap.Values())
+    {
+        system.debug('Fruit Name is...: '+ valueName);
+    }
+
+// Adding Duplicate Elements..
+fruitsMap.put('red','Cherry');
+
+system.debug('Collection Elements are....:');
+
+for(string key : fruitsMap.keyset())
+{
+	system.debug('Key is...: '+ key +  '   ---> Values : '+ fruitsMap.get(key));            
+}
+
+// Adding another element...
+fruitsMap.put('orange','orange');
+
+for(string key : fruitsMap.keyset())
+{
+	system.debug('Key is...: '+ key +  '   ---> Values : '+ fruitsMap.get(key));            
+}
+
+// Check for the collection is empty or not..
+if(fruitsMap.isEmpty())
+{
+    system.debug('Collection is Empty.');
+}
+else
+{
+    system.debug('Collection is Not Empty');
+}
+
+// Remove an element from the collection..
+if(fruitsMap.containsKey('orange'))
+{
+    system.debug('Element found in the collection.');
+    fruitsMap.Remove('orange');
+    
+    system.debug('After Removing the element, Collection size is...: '+ fruitsMap.size());
+}
+
+// Remove all the elements from the collection..
+fruitsMap.Clear();
+system.debug('Elements Count ....: '+ fruitsMap.size());
