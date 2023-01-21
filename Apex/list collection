@@ -48,7 +48,7 @@ lstName.Add(1,'Hyderabad');
 
 system.debug('After Insert, Elements are....: '+ lstName);
 
-// Remove the elements from the collection...
+// Remove the elements from the collection..
 lstName.Remove(2);
 
 system.debug('After Removing, Elements are...: '+ lstName);
