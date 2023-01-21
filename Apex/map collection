@@ -70,6 +70,6 @@ if(fruitsMap.containsKey('orange'))
     system.debug('After Removing the element, Collection size is...: '+ fruitsMap.size());
 }
 
-// Remove all the elements from the collection..
+// Remove all the elements from the collection.
 fruitsMap.Clear();
 system.debug('Elements Count ....: '+ fruitsMap.size());
