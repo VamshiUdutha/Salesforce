@@ -69,7 +69,7 @@ else
     system.debug('Element Not Found.');
 }
 
-// Remove all elements from collection..
+// Remove all elements from collection
 namesSet.Clear();
 
 system.debug('After Removing all elements, collection size is...: '+ namesSet.size());
