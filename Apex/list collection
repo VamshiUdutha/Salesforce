@@ -1,1 +1,51 @@
 
+list<string> newlist = new list<string>();
+
+//display list size before adding elements
+  system.debug(newlist.size());
+
+//add elements to list
+   newlist.add('Apex');
+   newlist.add('Salesforce');
+   newlist.add('India');
+
+    system.debug('After adding the elements collection size is:'+ newlist.size());
+
+//Display collection elements in single line
+
+  system.debug(newlist);
+
+//Display collection elements one by one
+
+  for(string ef: newlist){
+   system.debug(ef);
+}
+//Adding duplicate element in list
+  newlist.add('Salesforce');
+   system.debug('Collection size after adding duplicate element:'+ newlist.size());
+//Adding collection of elements at a time
+    string[] newstring= new string[]{'Oracle', 'MySQL', 'MongoDB', 'IBM Db2'};
+ newlist.AddAll(newstring);
+    for(string efl: newlist){
+       system.debug(efl);
+    }
+//Inserting element at specific position using index position
+   newlist.add(1,'Hyd');
+   
+//Setting element at specific position using index position
+  newlist.set(3,'Telangana');
+   for(string ef: newlist){
+     system.debug(ef);
+}
+//Removing element using index position
+  newlist.remove(4);
+      system.debug('After Removing, Elements are...: '+ newlist);
+ 
+//clearing all the elements
+newlist.clear();
+       if(newlist.isempty()){
+           system.debug('list is empty');
+       }
+       else{
+           system.debug('list is not empty');
+       }
