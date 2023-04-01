@@ -18,8 +18,15 @@ public class SetCollection {
         System.debug('Using containsall method =' + numSet.containsAll(numlist));
         System.debug('Comparing two sets =' + numSet.equals(clonedSet));
         System.debug('numSet Contains =' + numSet);
-        numSet.clear();
-        System.debug('numSet after using clear() =' + numSet);
-        System.debug('Checking whether the list is empty or not =' + numSet.isEmpty());
+        clonedSet.clear();
+        System.debug('clonedSet after using clear() =' + numSet);
+        System.debug('Checking whether the list is empty or not =' + clonedSet.isEmpty());
+        numSet.remove(30);
+        System.debug('After removing 30 from numSet =' + numSet);
+        numSet.removeAll(numList);
+        System.debug('After removing numList elements from numSet =' + numSet);
+        numset.retainAll(numList);
+        System.debug('After retaining all the elements of numList in numSet =' + numSet);
+        System.debug('The size of numSet is =' numset.size());
     }
 }
