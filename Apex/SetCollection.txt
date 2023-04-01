@@ -1,0 +1,25 @@
+public class SetCollection {
+    public static void setofinteger(){
+        Set<Integer> numSet = new Set<Integer>();
+        numSet.add(10);
+        numSet.add(20);
+        numSet.add(30);
+        System.debug('numSet Contains =' + numSet);
+        List<integer> numList = new List<Integer>();
+        numList.add(40);
+        numList.add(50);
+        numList.add(60);
+        numset.addAll(numlist);
+        System.debug('After adding numList into numSet =' + numSet);
+        Set<Integer> clonedSet = new Set<Integer>();
+        clonedSet = numSet.Clone();
+        System.debug('clonedSet contains =' + clonedSet);
+        System.debug('Using contains method =' + clonedSet.contains(10));
+        System.debug('Using containsall method =' + numSet.containsAll(numlist));
+        System.debug('Comparing two sets =' + numSet.equals(clonedSet));
+        System.debug('numSet Contains =' + numSet);
+        numSet.clear();
+        System.debug('numSet after using clear() =' + numSet);
+        System.debug('Checking whether the list is empty or not =' + numSet.isEmpty());
+    }
+}
