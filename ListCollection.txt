@@ -1,0 +1,35 @@
+public class ListCollection {
+    public static void colors(){
+        List<String> colorsList = new List<String>();
+        colorsList.add('Red');
+        colorsList.add('Green');
+        colorsList.add('Yellow');
+        colorsList.add('Blue');
+        colorsList.add(1,'Maroon');
+        System.debug('colorsList contains =' + colorsList);
+        System.debug('colorsList contains =' + colorsList);
+        List<String> addAllList = new List<String>();
+        addAllList.add('Pink');
+        addAllList.add('Orange');
+        colorsList.addAll(addAllList);
+        System.debug('colorsList contains =' + colorsList);
+        addAllList.Clear();
+        System.debug('addAllList After using Clear() =' + addAllList);
+        List<String> clonedList = new List<String>();
+        clonedList = colorsList.clone();
+        System.debug('clonedList contains =' + clonedList);
+        System.debug('colorsList contains method =' + colorsList.Contains('Red'));
+        System.debug('Equals method =' + colorsList.equals(clonedList));
+        System.debug('Get element based on index =' + colorsList.get(1)); 
+        System.debug('Get index number using element =' + colorsList.indexOf('Pink'));
+        System.debug('Check whether list is empty or not =' + colorsList.isEmpty());
+        System.debug('clonedList contains =' + colorsList);
+        colorsList.remove(3);
+        System.debug('After removing element from 3rd index  =' + colorsList);
+        colorsList.set(2, 'Black');
+        System.debug('After setting element black at index 2 =' + colorsList);
+        System.debug('Display size of the list =' + colorsList.size());
+        colorsList.sort();
+        System.debug('Display elements in sorted order =' + colorsList);
+    }
+}
