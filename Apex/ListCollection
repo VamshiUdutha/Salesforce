@@ -32,4 +32,4 @@ public class ListCollection {
         colorsList.sort();
         System.debug('Display elements in sorted order =' + colorsList);
     }
-}
+} 
