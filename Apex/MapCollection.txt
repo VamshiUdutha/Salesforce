@@ -30,4 +30,4 @@ public class MapCollection {
         System.debug('colorsMap size =' + colorsMap.size());
         System.debug('Using toString in colorsMap =' + colorsMap.toString());
     }
-} 
+}
