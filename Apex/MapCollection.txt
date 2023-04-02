@@ -1,0 +1,33 @@
+public class MapCollection {
+    public static void mapofcolors(){
+        Map<Integer, String> colorsMap = new Map<Integer, String>();
+        colorsMap.put(1, 'Red');
+        colorsMap.put(2, 'Blue');
+        colorsMap.put(3, 'Green');
+        colorsMap.put(4, 'Yellow');
+        colorsMap.put(5, 'Black');
+        System.debug('Map contains =' + colorsMap);
+        Map<Integer, String> colors2 = new Map<Integer, String>();
+        colors2.put(6, 'Pink');
+        colors2.put(7, 'Purple');
+        colors2.put(8, 'Orange');
+        System.debug('colors2 map contains =' + colors2);
+        colorsMap.putAll(colors2);
+        System.debug('colorsMap after adding colors2 map into it =' + colorsMap);
+        Map<Integer, String> clonedMap = new Map<Integer, String>();
+        clonedMap = colorsMap.clone();
+        System.debug('clonedMap contains =' + clonedMap);
+        System.debug('Using equals() method =' + clonedMap.equals(colorsMap));
+        if(clonedMap.containsKey(7)){
+            system.debug(clonedMap.get(7));
+        }
+        clonedMap.clear();
+        System.debug('clonedMap after using clear =' + clonedMap.isEmpty());
+        System.debug('Using keySet() method =' + colorsMap.keySet());
+        System.debug('Using values() method =' + colorsMap.values());
+        colorsMap.remove(2);
+        System.debug('colorsMao after removing element 2 =' + colorsMap);
+        System.debug('colorsMap size =' + colorsMap.size());
+        System.debug('Using toString in colorsMap =' + colorsMap.toString());
+    }
+}
